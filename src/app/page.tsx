@@ -50,7 +50,7 @@ export default function GoogleDriveClone() {
   const navigateToBreadcrumb = (index: number) => {
     const newBreadcrumb = breadcrumb.slice(0, index + 1)
     setBreadcrumb(newBreadcrumb)
-    setCurrentFolder(index === 0 ? mockData : newBreadcrumb[newBreadcrumb.length - 1].children || [])
+    setCurrentFolder(index === 0 ? mockData : newBreadcrumb[newBreadcrumb.length - 1]?.children ?? [])
   }
 
   return (
